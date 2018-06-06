@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Main from '@/components/main'
-import Chart from '@/components/chart-js'
-import Dashboard from '@/components/dashboard'
-import Radar from '@/components/radar'
-import Login from '@/components/login'
+import Main from '../components/main'
+import Chart from '../components/chart-js'
+import Dashboard from '../components/dashboard'
+import Radar from '../components/radar'
+import Login from '../components/login'
 import store from '../store'
 
 Vue.use(Router)

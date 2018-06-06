@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import Radar from '@/components/radar'
+import Radar from './radar'
 
 export default {
   name: 'Dashboard',
@@ -61,7 +61,7 @@ export default {
 <style>
   .el-main {
     background-color: #FAFAFA;
-  } 
+  }
   .text {
     font-size: 14px;
   }

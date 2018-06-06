@@ -7,8 +7,8 @@
 </template>
 
 <script>
-import Side from '@/components/layout/side'
-import Header from '@/components/layout/header'
+import Side from './side'
+import Header from './header'
 
 export default {
   name: 'Container',

@@ -1,22 +1,15 @@
-<template>
-  <div id="app">
-    <p>{{ message }}</p>
-  </div>
+<template lang="pug">
+  div#app
+    container-component
 </template>
 
 <script>
+import Container from './components/layout/container.vue'
+
 export default {
-  data: function () {
-    return {
-      message: "Hello Vue!"
-    }
+  name: 'App',
+  components: {
+    'container-component': Container
   }
 }
 </script>
-
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
-</style>

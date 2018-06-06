@@ -7,17 +7,26 @@
 
 import Vue from 'vue'
 import App from '../app.vue'
+import Vuex from 'vuex'
+import router from '../router/index'
+import store from '../store'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
+Vue.use(ElementUI)
+Vue.use(Vuex)
+Vue.config.productionTip = false
 
 document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('hello'))
-  const app = new Vue({
+  const el = document.body.appendChild(document.createElement('app'))
+  new Vue({
     el,
-    render: h => h(App)
+    render: h => h(App),
+    template: '<App/>',
+    router: router,
+    store
   })
-
-  console.log(app)
 })
-
 
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
