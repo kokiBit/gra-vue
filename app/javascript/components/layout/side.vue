@@ -44,7 +44,7 @@
           el-menu-item(index="3-4-1") Option 4-1
 </template>
 
-<style lang="stylus">  
+<style lang="stylus">
 .el-aside
   color #333
 .el-aside a

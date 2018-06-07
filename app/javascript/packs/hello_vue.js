@@ -5,29 +5,27 @@
 // like app/views/layouts/application.html.erb.
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
-import Vue from 'vue'
+import Vue from 'vue/dist/vue.esm'
 import App from '../app.vue'
 import Vuex from 'vuex'
 import router from '../router/index'
 import store from '../store'
 import ElementUI from 'element-ui'
+import locale from 'element-ui/lib/locale/lang/ja'
 import 'element-ui/lib/theme-chalk/index.css'
 
-Vue.use(ElementUI)
+Vue.use(ElementUI, { locale })
 Vue.use(Vuex)
+
 Vue.config.productionTip = false
 
-document.addEventListener('DOMContentLoaded', () => {
-  const el = document.body.appendChild(document.createElement('app'))
-  new Vue({
-    el,
-    render: h => h(App),
-    template: '<App/>',
-    router: router,
-    store
-  })
-})
-
+new Vue({
+  el: '#app',
+  components: { App },
+  template: '<App/>',
+  router: router,
+  store
+});
 // The above code uses Vue without the compiler, which means you cannot
 // use Vue to target elements in your existing html templates. You would
 // need to always use single file components.
